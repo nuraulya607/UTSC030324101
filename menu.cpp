@@ -71,6 +71,12 @@ void sortingData() {
     getch();
 }
 
+void sepatahKata() {
+    system("cls");
+    cout << "Indonesia Bisa, Kita Juara!\n@poliban";
+    getch();
+}
+
 int main() {
     char pilih;
     do {
@@ -80,7 +86,7 @@ int main() {
             case '1': inputData(); break;
             case '2': tampilData(); break;
             case '3': sortingData(); break;
-
+            case '4': sepatahKata(); break;
         }
     } while (pilih != '5');
     return 0;
