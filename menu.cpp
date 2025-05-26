@@ -46,6 +46,31 @@ void tampilData() {
     getch();
 }
 
+void sortingData() {
+    system("cls");
+    if (jumlahData == 0) {
+        cout << "Data kosong.";
+        getch();
+        return;
+    }
+
+    for (int i = 0; i < jumlahData - 1; i++) {
+        for (int j = 0; j < jumlahData - i - 1; j++) {
+            if (data[j] > data[j + 1]) {
+                int temp = data[j];
+                data[j] = data[j + 1];
+                data[j + 1] = temp;
+            }
+        }
+    }
+
+    cout << "Data setelah disorting:\n";
+    for (int i = 0; i < jumlahData; i++) {
+        cout << data[i] << " ";
+    }
+    getch();
+}
+
 int main() {
     char pilih;
     do {
@@ -54,6 +79,8 @@ int main() {
         switch (pilih) {
             case '1': inputData(); break;
             case '2': tampilData(); break;
+            case '3': sortingData(); break;
+
         }
     } while (pilih != '5');
     return 0;
