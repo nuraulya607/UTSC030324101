@@ -87,6 +87,10 @@ int main() {
             case '2': tampilData(); break;
             case '3': sortingData(); break;
             case '4': sepatahKata(); break;
+            default:
+                system("cls");
+                cout << "Pilihan tidak tersedia!";
+                getch();
         }
     } while (pilih != '5');
     return 0;
